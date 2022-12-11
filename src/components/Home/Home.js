@@ -1,10 +1,26 @@
 import React from 'react';
 import { FaArrowCircleRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import heroImage from '../../assets/1646585611024-01.jpeg'
 import './Home.css'
+import resume from '../../assets/Rifat-Front-End-resume.pdf'
 
 const Home = () => {
+
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch(`${resume}`).then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = `${resume}`;
+                alink.click();
+            })
+        })
+    }
+
     return (
         <div name="home"
             className='h-screen w-full bg-gradient-to-b from-black
@@ -17,14 +33,13 @@ const Home = () => {
                     <p className='text-gray-500 py-4 '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur laborum neque officiis, mollitia quisquam at quaerat hic a. Porro facilis dignissimos corrupti. Quos culpa tenetur deserunt cumque delectus vel optio.</p>
 
                     <div>
-                        <button className='btn group btn-primary'>
-                            Portfolio
-
+                        <button onClick={onButtonClick} className='btn group btn-primary'>
+                            DownLoad Resume
                             <span className='ml-4 group-hover:rotate-90 duration-300 '>
                                 <FaArrowCircleRight size={25}></FaArrowCircleRight>
                             </span>
                         </button>
-                        {/* <Link to="" target="_blank" download>Download</Link> */}
+
                     </div>
                 </div>
                 <div>

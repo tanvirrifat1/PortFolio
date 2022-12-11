@@ -1,11 +1,53 @@
-import React from "react";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_vw7flis',
+            'template_gfudgzk',
+            form.current,
+            'ftumh3iw7skXi5eFi')
+            .then((result) => {
+                console.log(result.text);
+                console.log('Message sent')
+            }, (error) => {
+                console.log(error.text);
+            });
+        toast.success('Message Sent successfully', { autoClose: 1000 })
+        e.target.reset()
+    };
+
+
+
     return (
+
+
+
         <div
             name="contact"
             className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
         >
+
+            {/* <div>
+                <form ref={form} onSubmit={sendEmail}>
+                    <label>Name</label>
+                    <input type="text" name="user_name" />
+                    <label>Email</label>
+                    <input type="email" name="user_email" />
+                    <label>Message</label>
+                    <textarea name="message" />
+                    <input type="submit" value="Send" />
+                </form>
+            </div> */}
+
+
             <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
                 <div className="pb-8">
                     <p className="text-4xl font-bold inline border-b-4 border-gray-500">
@@ -15,19 +57,18 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-center items-center">
                     <form
-                        action="https://getform.io/f/31313319-e886-40c5-af98-21b4317d9014"
-                        method="POST"
+                        ref={form} onSubmit={sendEmail}
                         className="flex flex-col w-full md:w-1/2"
                     >
                         <input
                             type="text"
-                            name="name"
+                            name="user_name"
                             placeholder="Enter your name"
                             className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
                         />
                         <input
                             type="text"
-                            name="email"
+                            name="user_email"
                             placeholder="Enter your email"
                             className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
                         />
