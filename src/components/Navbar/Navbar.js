@@ -32,7 +32,7 @@ const Navbar = () => {
     return (
         <div className="flex justify-between items-center w-full h-20 px-4 bg-black text-white fixed">
             <div>
-                <h1 className="text-5xl ml-2">Rifat</h1>
+                <h1 className="text-3xl ml-2 font-bold">RIFAT</h1>
             </div>
 
             <ul className="hidden md:flex">
@@ -40,14 +40,14 @@ const Navbar = () => {
                     <NavLinks
                         key={id}
                         link={link}
-                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+                        className="px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200"
                     />
                 ))}
             </ul>
 
             <div
                 onClick={() => setNav(!nav)}
-                className="cursor-pointer pr-4 md:hidden z-10 text-gray-500"
+                className="cursor-pointer pr-4 md:hidden z-10 "
             >
                 {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
