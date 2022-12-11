@@ -32,10 +32,10 @@ const Navbar = () => {
     return (
         <div className="flex justify-between items-center w-full h-20 px-4 bg-black text-white fixed">
             <div>
-                <h1 className="text-3xl ml-2 font-bold">RIFAT</h1>
+                <h1 className="text-3xl ml-8 font-bold">RIFAT</h1>
             </div>
 
-            <ul className="hidden md:flex">
+            <ul className="hidden md:flex mr-10">
                 {links.map(({ id, link }) => (
                     <NavLinks
                         key={id}
