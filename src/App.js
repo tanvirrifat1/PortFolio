@@ -9,6 +9,7 @@ import Blogs from './components/Section/Blogs';
 import SocialLink from './components/SocialLink/SocialLink';
 
 function App() {
+
   return (
     <div className="app">
       <Navbar></Navbar>

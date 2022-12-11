@@ -8,21 +8,6 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Home = () => {
 
-    // const onButtonClick = () => {
-    //     // using Java Script method to get PDF file
-    //     fetch(`${resume}`).then(response => {
-    //         response.blob().then(blob => {
-    //             // Creating new object of PDF file
-    //             const fileURL = window.URL.createObjectURL(blob);
-    //             // Setting various property values
-    //             let alink = document.createElement('a');
-    //             alink.href = fileURL;
-    //             alink.download = `${resume}`;
-    //             alink.click();
-    //         })
-    //     })
-    // }
-
     return (
         <div name="home"
             className='h-screen w-full bg-gradient-to-b from-black
@@ -48,7 +33,7 @@ const Home = () => {
 
                     <div>
                         <a href={resume} download className='btn group btn-primary mt-3'>
-                            DownLoad Resume
+                            Resume
                             <span className='ml-4 group-hover:rotate-90 duration-300 '>
                                 <FaArrowCircleRight size={25}></FaArrowCircleRight>
                             </span>

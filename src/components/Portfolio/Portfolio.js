@@ -21,7 +21,7 @@ const Portfolio = () => {
             src: arrayDestruct,
             link: "https://final-project-3130f.web.app/",
             code: "https://github.com/tanvirrifat1/Car-portal-Client",
-            details: "This Site mainly sells and buys old cars, anyone can sell their car if they want or buy a ca"
+            details: " It is a dentist's website, Anyone can book an appointment for all dentist's services No one can book more than one appointment for one service with one email Admin can add and remove a doctor for the services that are available Technology Used Reactjs ReactRouter Firebase Tailwind NodeJS Express JS MongoDB "
         },
         {
             id: 2,
@@ -29,7 +29,7 @@ const Portfolio = () => {
             name: 'Doctor-Portal',
             link: "https://doctors-portal-d24d1.web.app/",
             code: "https://github.com/tanvirrifat1/doctors-portal-client",
-            details: "hello"
+
         },
         {
             id: 3,
@@ -37,7 +37,7 @@ const Portfolio = () => {
             name: "Fast-Food",
             link: "https://assignment-project-33308.web.app/?fbclid=IwAR0hDcv7V8ELNEva2wk0YG8V6uFfnrZHGs-7hNQRGLMHB0S7gM9ZWc61fyY",
             code: "https://github.com/tanvirrifat1/assignment-11-client",
-            details: "dskjfndsk"
+
         },
         {
             id: 4,
@@ -45,7 +45,7 @@ const Portfolio = () => {
             name: 'Genius Car',
             link: "https://genius-car-79e39.web.app/?fbclid=IwAR1yRMGWllRv15lNESlGS9WjtXg4p4qkYGGWN_kTcyzhQSjn6TrTQO84ugs",
             code: "https://github.com/tanvirrifat1/genius-car-client",
-            details: "ksdljfnbkdslj"
+
         },
         {
             id: 5,
@@ -53,7 +53,7 @@ const Portfolio = () => {
             name: 'World News',
             link: "https://world-news-d408b.web.app/?fbclid=IwAR3OesTv5a2J9gcQoJgU83F41A4yAMUCJvgqAS8xs2TNHdh3iwP93V-Kkf8",
             code: "https://github.com/tanvirrifat1/world-news-client",
-            details: "dksjlfhdkljsh"
+
         },
         {
             id: 6,
@@ -61,7 +61,7 @@ const Portfolio = () => {
             name: 'React Learning',
             link: "https://vermillion-granita-d89a19.netlify.app/?fbclid=IwAR1uB0qhG-uKbIiO40xaM6fzgydC28NfddULL5NeXfoMPID7pQXtnPsumqE",
             code: "https://github.com/tanvirrifat1/assignment-10-client",
-            details: "djsk"
+
         },
     ];
 
@@ -111,7 +111,7 @@ const Portfolio = () => {
                                 </div>
 
                                 <button>
-                                    {/* <label htmlFor="my-modal-6" className="btn">Details</label>
+                                    <label htmlFor="my-modal-6" className="btn">Details</label>
                                     <input type="checkbox" id="my-modal-6" className="modal-toggle" />
                                     <div className="modal modal-bottom sm:modal-middle">
                                         <div className="modal-box">
@@ -122,8 +122,7 @@ const Portfolio = () => {
                                                 <label htmlFor="my-modal-6" className="btn">X</label>
                                             </div>
                                         </div>
-                                    </div> */}
-                                    <Modal></Modal>
+                                    </div>
                                 </button>
                             </div>
                         </div>
