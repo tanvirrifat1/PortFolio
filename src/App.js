@@ -5,6 +5,7 @@ import Experience from './components/Exprience/Exprience';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Portfolio from './components/Portfolio/Portfolio';
+import Blogs from './components/Section/Blogs';
 import SocialLink from './components/SocialLink/SocialLink';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Experience></Experience>
       <Contack></Contack>
       <SocialLink></SocialLink>
+      <Blogs></Blogs>
     </div>
   );
 }
